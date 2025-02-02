@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web Element Test Suite" thread-count="4" parallel="tests">
+    <!-- Suite level parameters -->
+    <parameter name="retry.count" value="3"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="remote" value="true"/>
+    <parameter name="gridUrl" value="http://localhost:4444/"/>
+    <parameter name="implicitWait" value="10"/>
+    <parameter name="explicitWait" value="30"/>
+    <parameter name="pageLoadTimeout" value="60"/>
+    <parameter name="headless" value="false"/>
+    <parameter name="browserVersion" value="latest"/>
+
+    <listeners>
+        <listener class-name="com.framework.listeners.TestListener"/>
+        <listener class-name="com.framework.retry.RetryAnnotationTransformer"/>
+    </listeners>
+
+<!--    <test name="Chrome Tests">-->
+
+<!--        <classes>-->
+<!--            <class name="com.tests.SampleTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Firefox Tests">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.tests.SampleTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Element Interaction Tests">
+        <!-- Test level parameters (will override suite parameters) -->
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.tests.ElementInteractionTest"/>
+        </classes>
+    </test>
+</suite>
