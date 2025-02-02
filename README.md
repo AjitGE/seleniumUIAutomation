@@ -29,9 +29,6 @@ A robust test automation framework built with Selenium WebDriver, TestNG, and Do
 - Log4j2
 - Docker & Docker Compose
 - Maven
-- REST Assured (API Testing)
-- Apache POI (Excel Operations)
-- Jackson (JSON Operations)
 
 ## 🔧 Setup Instructions
 
@@ -43,17 +40,8 @@ A robust test automation framework built with Selenium WebDriver, TestNG, and Do
 
 ### Configuration
 
-1. Environment Configuration (`config.properties`):
-   properties
-   browser=chrome
-   baseUrl=https://www.example.com
-   implicit.wait=10
-   explicit.wait=20
-   retry.count=2
-   screenshot.policy=FAILURE_ONLY
-   extent.report.theme=DARK
 
-2. TestNG Configuration (`testng.xml`):
+1. TestNG Configuration (`testng.xml`):
    xml
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
